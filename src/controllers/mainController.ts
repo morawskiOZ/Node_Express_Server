@@ -1,3 +1,5 @@
+import nodemailer from 'nodemailer'
+
 exports.homePage = (req, res) => {
   res.send("Welcome to my api")
 };
@@ -43,5 +45,4 @@ exports.sendMail =  async (req, res)=>{
       console.log('Message %s sent: %s', info.messageId, info.response);
       res.send(info.responseCode)
   });
-	res.json(result)
 };
