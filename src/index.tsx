@@ -1,10 +1,8 @@
-import express from "express";
-import bodyParser from "body-parser";
-import nodemailer from "nodemailer";
-import cors from "cors";
-import routes from './src/'
-import errorHandlers from './handlers/errorHandlers'
-
+import bodyParser from "body-parser"
+import cors from "cors"
+import express from "express"
+import routes from "./routes/index"
+const errorHandlers = require('./handlers/errorHandlers');
 
 const app = express()
 
@@ -21,7 +19,7 @@ app.listen(port, () => {
 })
 
 // I am using routes to allow for scaling of this boilerplate!
-app.use('/', routes);
+app.use("/", routes)
 
 // If that above routes didnt work, we 404 them and forward to error handler
-app.use(errorHandlers.notFound);
+app.use(errorHandlers.notFound)

@@ -1,3 +1,4 @@
+"use strict";
 var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
     return new (P || (P = Promise))(function (resolve, reject) {
         function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
@@ -6,6 +7,11 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
         step((generator = generator.apply(thisArg, _arguments || [])).next());
     });
 };
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+const nodemailer_1 = __importDefault(require("nodemailer"));
 exports.homePage = (req, res) => {
     res.send("Welcome to my api");
 };
@@ -13,7 +19,7 @@ exports.sendMail = (req, res) => __awaiter(this, void 0, void 0, function* () {
     const data = req.body;
     console.log(data);
     console.log(process.env.MAIL_HOST);
-    const transporter = nodemailer.createTransport({
+    const transporter = nodemailer_1.default.createTransport({
         host: process.env.MAIL_HOST,
         secureConnection: false,
         port: process.env.MAIL_PORT,
@@ -46,6 +52,5 @@ exports.sendMail = (req, res) => __awaiter(this, void 0, void 0, function* () {
         console.log('Message %s sent: %s', info.messageId, info.response);
         res.send(info.responseCode);
     });
-    res.json(result);
 });
 //# sourceMappingURL=mainController.js.map
