@@ -1,30 +1,12 @@
-import express from "express"
-import bodyParser from "body-parser"
-import nodemailer from "nodemailer"
-import cors from "cors"
-import { getMaxListeners } from "cluster";
-import routes from './routes/index'
-
-
-const app = express()
-
-const port = 4444
-
-app.use(bodyParser.json())
-app.use(bodyParser.urlencoded({ extended: true }))
-
-app.use(cors())
-
-app.listen(port, () => {
-  console.log("We are live on port 4444")
-})
-
-app.get("/", (req, res) => {
+exports.homePage = (req, res) => {
   res.send("Welcome to my api")
-})
+};
 
-app.post("/api/v1", async (req, res) => {
+exports.sendMail =  async (req, res)=>{
+
   const data = req.body
+  console.log(data)
+  console.log(process.env.MAIL_HOST)
 
   const transporter = nodemailer.createTransport({
     host: process.env.MAIL_HOST,
@@ -61,4 +43,5 @@ app.post("/api/v1", async (req, res) => {
       console.log('Message %s sent: %s', info.messageId, info.response);
       res.send(info.responseCode)
   });
-})
+	res.json(result)
+};
