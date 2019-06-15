@@ -21,15 +21,24 @@ app.get("/", (req, res) => {
     res.send("Welcome to my api");
 });
 app.post("/api/v1", (req, res) => {
-    var data = req.body;
+    const data = req.body;
     console.log(data);
     console.log(process.env.MAIL_HOST);
-    var smtpTransport = nodemailer_1.default.createTransport({
-        service: process.env.MAIL_HOST,
+    const smtpTransport = nodemailer_1.default.createTransport({
+        host: process.env.MAIL_HOST,
         port: process.env.MAIL_PORT,
+        secure: false,
         auth: {
             user: process.env.MAIL_USER,
             pass: process.env.MAIL_PASS
+        }
+    });
+    smtpTransport.verify(function (error, success) {
+        if (error) {
+            console.log(error);
+        }
+        else {
+            console.log("Server is ready to take our messages");
         }
     });
     var mailOptions = {
@@ -47,6 +56,7 @@ app.post("/api/v1", (req, res) => {
         }
         else {
             res.send("Success");
+            console.log("Msg succ");
         }
         smtpTransport.close();
     });
