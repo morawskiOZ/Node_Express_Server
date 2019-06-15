@@ -15,7 +15,6 @@ app.use(cors())
 
 app.listen(port, () => {
   console.log("We are live on port 4444")
-  console.log(process.env.MAIL_HOST)
 })
 
 // I am using routes to allow for scaling of this boilerplate!
