@@ -14,7 +14,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const nodemailer_1 = __importDefault(require("nodemailer"));
 const path = require("path");
 exports.homePage = (req, res) => {
-    res.sendFile(path.join(__dirname + "../../../../piotr_morawski_portfolio/build/index.html"));
+    res.sendFile(path.join(__dirname + "../../../../Portfolio/build/index.html"));
 };
 exports.sendMail = (req, res) => __awaiter(this, void 0, void 0, function* () {
     const transporter = nodemailer_1.default.createTransport({

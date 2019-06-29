@@ -18,7 +18,7 @@ app.use(cors_1.default());
 app.listen(process.env.PORT, () => {
     console.log(process.env.PORT);
 });
-app.use(express.static(path_1.default.join(__dirname, "../../piotr_morawski_portfolio/build")));
+app.use(express.static(path_1.default.join(__dirname, "../../Portfolio/build")));
 // I am using routes to allow for scaling of this boilerplate!
 app.use("/", index_1.default);
 // If that above routes didnt work, we 404 them and forward to error handler

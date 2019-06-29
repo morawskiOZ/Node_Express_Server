@@ -4,7 +4,7 @@ const path = require("path")
 exports.homePage = (req, res) => {
   res.sendFile(
     path.join(
-      __dirname + "../../../../piotr_morawski_portfolio/build/index.html"
+      __dirname + "../../../../Portfolio/build/index.html"
     )
   )
 }
