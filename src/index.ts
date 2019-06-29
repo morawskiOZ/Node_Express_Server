@@ -4,8 +4,11 @@ import bodyParser from "body-parser"
 import path from "path"
 const express = require("express")
 const errorHandlers = require("./handlers/errorHandlers")
+<<<<<<< HEAD:src/index.tsx
 require('dotenv').config()
 
+=======
+>>>>>>> f950afd8b02c60a502031a2e45ac2f8c10987f84:src/index.ts
 
 const app = express()
 
