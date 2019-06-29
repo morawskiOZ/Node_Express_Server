@@ -1,14 +1,11 @@
 import nodemailer from 'nodemailer'
+const path = require('path');
 
 exports.homePage = (req, res) => {
-  res.send("Welcome to my api")
+  res.sendFile(path.join(__dirname+'../../../../piotr_morawski_portfolio/build'));
 };
 
-exports.sendMail =  async (req, res)=>{
-
-  const data = req.body
-  console.log(data)
-  console.log(process.env.MAIL_HOST)
+exports.sendMail =  async (req, res)=>{2
 
   const transporter = nodemailer.createTransport({
     host: process.env.MAIL_HOST,
@@ -23,9 +20,7 @@ exports.sendMail =  async (req, res)=>{
   const check = await transporter.verify(function(error, success) {
     if (error) {
       console.log(error)
-    } else {
-      console.log("Server is ready to take our messages")
-    }
+    } else { }
   })
 
   var mailOptions = {
@@ -42,7 +37,6 @@ exports.sendMail =  async (req, res)=>{
       if (error) {
           return console.log(error);
       }
-      console.log('Message %s sent: %s', info.messageId, info.response);
       res.send(info.responseCode)
   });
 };
