@@ -9,7 +9,6 @@
     "dev": "DEBUG=express:* node .",
     "build-ts": "tsc",
     "watch-ts": "tsc -w",
-    "heroku-postbuild": "cd client && npm install && npm run build"
   },
   "author": "Piotr Morawski",
   "license": "ISC",
