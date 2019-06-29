@@ -4,6 +4,7 @@ import bodyParser from "body-parser"
 import path from "path"
 const express = require("express")
 const errorHandlers = require("./handlers/errorHandlers")
+require('dotenv').config()
 
 const app = express()
 
@@ -11,11 +12,10 @@ const port = 4444
 
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extended: true }))
-
 app.use(cors())
 
-app.listen(port, () => {
-  console.log("We are live on port 4444")
+app.listen(process.env.PORT, () => {
+  console.log(process.env.PORT )
 })
 app.use(
   express.static(path.join(__dirname, "../../piotr_morawski_portfolio/build"))
