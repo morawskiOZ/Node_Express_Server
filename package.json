@@ -8,7 +8,7 @@
     "start": "DEBUG=express:* node -r dotenv/config .",
     "dev": "DEBUG=express:* node .",
     "build-ts": "tsc",
-    "watch-ts": "tsc -w",
+    "watch-ts": "tsc -w"
   },
   "author": "Piotr Morawski",
   "license": "ISC",
