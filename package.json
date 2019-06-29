@@ -6,6 +6,7 @@
   "scripts": {
     "test": "npm run test",
     "start": "DEBUG=express:* node -r dotenv/config .",
+    "dev": "DEBUG=express:* node .",
     "build-ts": "tsc",
     "watch-ts": "tsc -w",
     "heroku-postbuild": "cd client && npm install && npm run build"
@@ -13,8 +14,6 @@
   "author": "Piotr Morawski",
   "license": "ISC",
   "dependencies": {
-    "@types/node": "^12.0.8",
-    "@types/request": "^2.47.0",
     "body-parser": "^1.19.0",
     "cors": "^2.8.5",
     "custom-env": "^1.0.2",
@@ -23,6 +22,8 @@
     "nodemailer": "^6.2.1"
   },
   "devDependencies": {
+    "@types/node": "^12.0.8",
+    "@types/request": "^2.47.0",
     "@types/body-parser": "^1.17.0",
     "@types/cors": "^2.8.5",
     "@types/nodemailer": "^6.2.0"
