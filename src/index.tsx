@@ -1,8 +1,11 @@
-import bodyParser from "body-parser"
 import cors from "cors"
-import express from "express"
 import routes from "./routes/index"
-const errorHandlers = require('./handlers/errorHandlers');
+import bodyParser from "body-parser"
+import path from "path"
+const express = require("express")
+const errorHandlers = require("./handlers/errorHandlers")
+require('dotenv').config()
+
 
 const app = express()
 
@@ -13,10 +16,12 @@ app.use(bodyParser.urlencoded({ extended: true }))
 
 app.use(cors())
 
-app.listen(port, () => {
-  console.log("We are live on port 4444")
+app.listen(process.env.PORT, () => {
+  console.log(process.env.PORT )
 })
-
+app.use(
+  express.static(path.join(__dirname, "../../piotr_morawski_portfolio/build"))
+)
 // I am using routes to allow for scaling of this boilerplate!
 app.use("/", routes)
 
