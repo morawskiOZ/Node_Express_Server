@@ -20,7 +20,7 @@ exports.sendMail = async (req, res) => {
     }
   } as any)
 
-  const check = await transporter.verify(function(error, success) {
+  const check = await transporter.verify(function(error) {
     if (error) {
       console.log(error)
     } else {

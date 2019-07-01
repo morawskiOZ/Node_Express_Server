@@ -26,7 +26,7 @@ exports.sendMail = (req, res) => __awaiter(this, void 0, void 0, function* () {
             pass: process.env.MAIL_PASS
         }
     });
-    const check = yield transporter.verify(function (error, success) {
+    const check = yield transporter.verify(function (error) {
         if (error) {
             console.log(error);
         }
