@@ -5,7 +5,7 @@
   "main": "dist/index.js",
   "scripts": {
     "test": "npm run test",
-    "start": "DEBUG=express:* node -r dotenv/config .",
+    "start": "node dist/index.js",
     "dev": "DEBUG=express:* node .",
     "build-ts": "tsc",
     "watch-ts": "tsc -w"

@@ -1,0 +1,4 @@
+[submodule "KRD_task"]
+	path = KRD_task
+	url = https://github.com/morawskiOZ/KRD_task.git
+	branch = master
