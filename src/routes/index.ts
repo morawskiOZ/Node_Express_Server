@@ -1,10 +1,6 @@
-const express = require('express');
-const router = express.Router();
-const mainController = require('../controllers/mainController');
-
-// API
-
-router.post("/api/v1", mainController.sendMail );
+const express = require("express")
+const router = express.Router()
+const mainController = require("../controllers/mainController")
 
 // HomePage, any request that does not match aboves (react router ready)
 
