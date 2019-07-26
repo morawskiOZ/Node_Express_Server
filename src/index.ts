@@ -16,7 +16,7 @@ app.listen(process.env.PORT, () => {
   console.log(process.env.PORT )
 })
 app.use(
-  express.static(path.join(__dirname, "../../Portfolio/build"))
+  express.static(path.join(__dirname, `../${process.env.FRONT_NAME}/build`))
 )
 // I am using routes to allow for scaling of this boilerplate!
 app.use("/", routes)

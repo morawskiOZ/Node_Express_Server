@@ -3,9 +3,7 @@ const path = require("path")
 
 exports.homePage = (req, res) => {
   res.sendFile(
-    path.join(
-      __dirname + "../../../../Portfolio/build/index.html"
-    )
+    path.join(__dirname + `../../../${process.env.FRONT_NAME}/build/index.html`)
   )
 }
 
