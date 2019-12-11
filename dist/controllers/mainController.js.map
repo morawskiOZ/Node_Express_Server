@@ -1,1 +1,5 @@
+<<<<<<< HEAD
 {"version":3,"file":"mainController.js","sourceRoot":"","sources":["../../src/controllers/mainController.ts"],"names":[],"mappings":";;AACA,MAAM,IAAI,GAAG,OAAO,CAAC,MAAM,CAAC,CAAA;AAE5B,OAAO,CAAC,QAAQ,GAAG,CAAC,GAAG,EAAE,GAAG,EAAE,EAAE;IAC9B,GAAG,CAAC,QAAQ,CACV,IAAI,CAAC,IAAI,CAAC,SAAS,GAAG,YAAY,OAAO,CAAC,GAAG,CAAC,UAAU,mBAAmB,CAAC,CAC7E,CAAA;AACH,CAAC,CAAA"}
+=======
+{"version":3,"file":"mainController.js","sourceRoot":"","sources":["../../src/controllers/mainController.ts"],"names":[],"mappings":"AAAA,MAAM,IAAI,GAAG,OAAO,CAAC,MAAM,CAAC,CAAA;AAE5B,OAAO,CAAC,QAAQ,GAAG,CAAC,GAAG,EAAE,GAAG,EAAE,EAAE;IAC9B,GAAG,CAAC,QAAQ,CACV,IAAI,CAAC,IAAI,CAAC,SAAS,GAAG,YAAY,OAAO,CAAC,GAAG,CAAC,UAAU,mBAAmB,CAAC,CAC7E,CAAA;AACH,CAAC,CAAA"}
+>>>>>>> 94618ba8d9149a3c8ddb5bb95756f1542503fd65

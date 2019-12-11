@@ -1,4 +1,4 @@
-[submodule "Monterail_Task"]
-	path = Monterail_Task
-	url = https://github.com/morawskiOZ/Monterail_Task.git
+[submodule "KRD_task"]
+	path = KRD_task
+	url = https://github.com/morawskiOZ/KRD_task.git
 	branch = master
