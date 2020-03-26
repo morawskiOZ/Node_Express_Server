@@ -1,13 +1,13 @@
 ### Intro
 
-I used this template in the very begining of my programming path. It was used with github submodules to serve my frontend projects. Heroku was the place for my deployments.
+I used this template in the very beginning of my programming path. It was used with github submodule to serve my frontend projects. Heroku was the place for my deployments.
 
 ## Quickstart
 
-If you want to use it, first clone the repo. Then add git submodule with your FE project. Then you need env:
+If you want to use it, first clone the repo. Then add git submodule with your FE project, follow this instruction if are not sure how - https://git-scm.com/book/en/v2/Git-Tools-Submodules. Then you need envs:
 - FRONT_NAME - your FE submodule name , it is going to be served by Express(there need to be a build folder prepared already with all the static assets)
 
-For sending emails you need additional Env (from your email delivery provider):
+For sending emails you need (from your email delivery provider):
 - MAIL_HOST - email host
 - MAIL_PORT - port to use for sending
 - MAIL_USER - your email sender provider login
