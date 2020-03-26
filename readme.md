@@ -13,7 +13,7 @@ For sending emails you need additional Env (from your email delivery provider):
 - MAIL_USER - your email sender provider login
 - MAIL_PASS -your email sender provider password
 
-I usually used Heroku for deployment, please see their docs for details: https://devcenter.heroku.com/articles/git
+Now it is time for deployment. I usually used Heroku for it, please see their docs for details: https://devcenter.heroku.com/articles/git . The instructions there are spot on, remember to add your ENVs in Heroku (through the website interface once you are log in)
 
 ## Additional tips
 

@@ -11,6 +11,7 @@ const express = require("express");
 const errorHandlers = require("./handlers/errorHandlers");
 require('dotenv').config();
 const app = express();
+const port = 4444;
 app.use(body_parser_1.default.json());
 app.use(body_parser_1.default.urlencoded({ extended: true }));
 app.use(cors_1.default());
